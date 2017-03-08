@@ -1,0 +1,12 @@
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $scope.names = data1;  
+    $scope.cat = getUrlVars()["cat"]; 
+    
+    $http.get("http://abenojar-kenneth.xyz/fab-u-less/names.php")
+        .then(function (response) {$scope.names2 = response.data.mycart;});
+ 
+
+        function getUrlVars() {
+        var vars = {};
+        var pa

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.css">
+        <title>Fab-U-less</title
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="fab/css/framework7.ios.min.css">
+        <link rel="stylesheet" href="fab/css/framework7.ios.colors.min.css">
+        <link rel="stylesheet" href="fab/css/my-app.css">
+    </head>
+    <body>
+
+
+      <div class="views">
+        <div class="view view-main">
+
+                  <div class="navbar">
+                        <div class="navbar-inner">
+                        <!--<div class="left">
+                                <a href="#" class="open-login-screen" style="color:white !important;"><i style="font-size:8vw;"  style="color:white !important;" class="fa fa-search"></i></a>
+                            </div>
+                            <div class="center"></div>-->
+                            <div class="left">
+                                <a href="home.html" class="external" style="color:white !important; font-size:5vw;"><i class="fa fa-home"></i> Fab-U-less</a>
+                            </div>
+                            <div class="right">
+                                <a href="#" data-panel="right" class="open-panel"><i style="font-size:8.5vw;"  style="color:white !important;" class="fa fa-bars"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                  <!-- "hide-bars-on-scroll" class to hide both Navbar and Toolbar -->
+  <div class="page">
+                  <a href="#" class="close-panel">
+                    <div class="page-content hide-bars-on-scroll">
+
+                          <br>
+
+                          <style>
+            .facebook-card .card-header {
+              display: block;
+              padding: 10px;
+            }
+            .facebook-card .facebook-avatar {
+              float: left;
+            }
+            .facebook-card .facebook-name {
+              margin-left: 44px;
+              font-size: 14px;
+              font-weight: 500;
+            }
+            .facebook-card .facebook-date {
+              margin-left: 44px;
+              font-size: 13px;
+              color: #8e8e93;
+            }
+            .facebook-card .card-footer {
+              background: #fafafa;
+            }
+            .facebook-card .card-footer a {
+              color: #81848b;
+              font-weight: 500;
+            }
+            .facebook-card .card-content img {
+              display: block;
+            }
+            .facebook-card .card-content-inner {
+              padding: 15px 10px;
+            }
+            .card{
+              width: 94%;
+            }
+          </style>
+<div class="content-block-title">Send Your Secret Recipe</div>
+<div class="list-block">
+  <ul>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input">
+            <input type="text" placeholder="Your name" name="name" required id="a">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input">
+            <input type="email" placeholder="E-mail" name="email" required id="b">
+          </div>
+        </div>
+      </div>
+    </li> 
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input" style="height:300px;">
+            <textarea placeholder="Recipe" style="height:100% border-bottom:1px solid #333;" name="recipe" required id="c"></textarea>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input">
+            <a href="#" class="button button-big button-green" id="send">Submit</a><br>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>      
+         </div>
+ 
+
+
+
+
+                    </a>
+                  </div>
+           </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>   
+<script type="text/javascript">
+     $(document).ready(function() { 
+       
+          $('#send').click(function(){ 
+              $(this).html('<img src="img/loader.gif" style="margin-top:1%; width:13%;">');
+              var a = $('#a').val();
+              var b = $('#b').val();
+              var c = $('#c').val();
+              $.post('http://abenojar-kenneth.xyz/fab-u-less/mail.php',{ a:a , b:b, c:c },function(data){  });
+                
+                   setTimeout(function(){
+                      alert('Your Recipe Suggestion is on process'); 
+                      $('#send').html('Submit'); 
+                      $('#a').val('');
+                      $('#b').val('');
+                      $('#c').val('');
+                    },2000); 
+
+          });
+        }); 
+</script>
+
+
+
+
+
+        <!--<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>-->
+        <script type="text/javascript" src="fab/js/framework7.min.js"></script>
+        <script type="text/javascript" src="fab/js/my-app.js"></script>
+    </body>
+</html>
+
+
+<div class="panel panel-right panel-cover">
+  <div class="content-block">
+    <center><img src="img/logo.png" width="50%;" class="close-panel"></center>
+    <h2 class="close-panel"><center>Fab-U-less</center></h2>
+    <p><a href="home.html" class="external" style="font-size:5vw; color:#7f8c8d;"><i class="fa fa-home"></i> Home</a></p>
+    <p><a href="home.html" class="external" style="font-size:5vw; color:#7f8c8d;"><i class="fa fa-search"></i> Search</a></p>
+    <p><a href="send.html" class="external" style="font-size:5vw; color:#7f8c8d;"><i class="fa fa-envelope"></i> Send your Recipe</a></p>
+    <p><a href="#" style="font-size:5vw; color:#7f8c8d;"><i class="fa fa-leaf"></i> Category</a></p>
+    <ul style="list-style-type:bullets;">
+      <li><a href="category.html?cat=Beef" class="external" class="close-panel" style="font-size:5vw; color:#7f8c8d;">Beef</a></li>
+      <li><a href="category.html?cat=Pancit" class="external" class="close-panel" style="font-size:5vw; color:#7f8c8d;">Pancit</a></li>
+      <li><a href="category.html?cat=Dessert" class="external" class="close-panel" style="font-size:5vw; color:#7f8c8d;">Dessert</a></li>
+      <li><a href="category.html?cat=Chicken" class="external" class="close-panel" style="font-size:5vw; color:#7f8c8d;">Chicken</a></li>
+      <li><a href="category.html?cat=Veggies" class="external" class="close-panel" style="font-size:5vw; color:#7f8c8d;">Veggies</a></li> 
+      <li><a href="category.html?cat=Fish" class="external" class="close-panel" style="font-size:5vw; color:#7f8c8d;">Fish</a></li>
+      <li><a href="category.html?cat=Pork" class="external" class="close-panel" style="font-size:5vw; color:#7f8c8d;">Pork</a></li>
+    </ul>
+    <p><a href="about.html" class="external" style="font-size:5vw; color:#7f8c8d;"><i class="fa fa-apple"></i> About</a></p>
+    <p><center><a href="#" class="close-panel" style="font-size:5vw; color:#7f8c8d;"><button>Close <i class="fa fa-remove"></i></button></a></center></p>
+  </div>
+</div>
+
+
+                  <div class="login-screen">
+                     <div class="view">
+                       <div class="page">
+                          <form class="searchbar hide-bars-on-scroll">
+                            <div class="searchbar-input">
+                                <input type="search" placeholder="Search" style="width:95% !important;">
+                                <a href="#" class="searchbar-clear"></a>
+                            </div>
+                            <a href="#" class="close-login-screen">Cancel</a>
+                        </form>
+                        
+                        <!-- Search Bar overlay-->
+                        <div class="searchbar-overlay"></div>
+                        
+                        <!-- Page content -->
+                        <div class="page-content" style="z-index:-1;">
+                           
+                            <div class="card demo-card-header-pic">
+                            <div style="background-image:url('img/food2.jpg')"valign="bottom" class="card-header color-white no-border"></div>
+                            <div class="card-content">
+                              <div class="card-content-inner">
+                                <p style="color:#333;"><b>Lumpiang Shanghai</b></p>
+                              </div>
+                            </div>
+                            <div class="card-footer">
+                              <a href="#" class="link" style="color:blue !important;"></a>
+                              <a href="food.html" class="external" style="color:blue !important;">Read more</a>
+                            </div>
+                          </div>
+
+                            <div class="card demo-card-header-pic">
+                            <div style="background-image:url('img/food2.jpg')"valign="bottom" class="card-header color-white no-border"></div>
+                            <div class="card-content">
+                              <div class="card-content-inner">
+                                <p style="color:#333;"><b>Lumpiang Shanghai</b></p>
+                              </div>
+                            </div>
+                            <div class="card-footer">
+                              <a href="#" class="link" style="color:blue !important;"></a>
+                              <a href="food.html" class="external" style="color:blue !important;">Read more</a>
+                            </div>
+                          </div>
+                            
+
+                        </div> 
+                       </div>
+                     </div>
+                   </div>
